@@ -1,24 +1,17 @@
 import logo from './logo.svg';
 import './App.css';
+import TablePage from './pages/TablePage ';
+import { Route, Routes } from 'react-router-dom';
+import Dashboard from './pages/Dashboard';
+import Schedule from './pages/Schedule';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Routes>
+      <Route path="/table" element={<TablePage />} />
+      <Route path="/dashboard" element={<Dashboard />} />
+      <Route path="/schedule" element={<Schedule />} />
+    </Routes>
   );
 }
 

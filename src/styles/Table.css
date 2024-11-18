@@ -1,0 +1,58 @@
+/* Custom horizontal scrollbar */
+.scrollbar-thin::-webkit-scrollbar {
+  height: .5rem; /* Adjust height for horizontal scrollbar */
+  width: auto;
+}
+
+/* Custom horizontal scrollbar thumb */
+.scrollbar-thin::-webkit-scrollbar-thumb {
+  background-color: #4B5563; /* Dark gray color */
+  border-radius: 2px; /* Rounded corners for the thumb */
+}
+
+/* Custom scrollbar track */
+.scrollbar-thin::-webkit-scrollbar-track {
+  background-color: #E5E7EB; /* Light gray track */
+  border-radius: 2px; /* Rounded corners for the track */
+}
+
+/* Change thumb color on hover */
+.scrollbar-thin::-webkit-scrollbar-thumb:hover {
+  background-color: #374151; /* Darker gray when hovered */
+}
+
+/* Add triangle-shaped arrows for horizontal scrollbar */
+
+/* Left arrow (pointing left) for the horizontal scrollbar */
+.scrollbar-thin::-webkit-scrollbar-button:single-button:start {
+  background-color: transparent;
+ width: 1rem;
+  height: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  border-right: 7px solid #4B5563; /* Right side of the triangle */
+}
+
+/* Right arrow (pointing right) for the horizontal scrollbar */
+.scrollbar-thin::-webkit-scrollbar-button:single-button:end {
+  background-color: transparent;
+  width: 1rem;
+  height: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  border-left: 7px solid #4B5563; /* Left side of the triangle */
+}
+
+/* Arrow visibility when the scrollbar is not active */
+.scrollbar-thin::-webkit-scrollbar-button:start:hover,
+.scrollbar-thin::-webkit-scrollbar-button:end:hover {
+  background-color: transparent;
+  border-color: #374151; /* Darker color for the triangle border on hover */
+  cursor: pointer;
+}
