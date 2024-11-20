@@ -5,7 +5,7 @@ import Sidemenu from "../Menus/Sidemenu";
 const Header = ({user}) => {
   return (
     <>
-      <div className="bg-gray-900 h-50 ">
+      <div className=" fixed top-0 z-30 bg-gray-900 h-50 ">
         <div className="flex">
           <Topmenu />
         </div>

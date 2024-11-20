@@ -11,7 +11,7 @@ const Card = ({
   styles,
 }) => {
   return (
-    <div className={`${bgColor} flex  justify-start items-center bg-white border border-gray-200 rounded-lg shadow-lg w-56 max-w-xs sm:max-w-md`}>
+    <div className={`${bgColor} flex  justify-start items-center bg-white border border-gray-200 rounded-lg shadow-lg w-full max-w-xs sm:max-w-md`}>
       {/* Card Content */}
 
       {/* Circular Progress Bar */}

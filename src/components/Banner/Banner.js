@@ -11,7 +11,7 @@ const Banner = ({ title, subheading, data, backgroundColor }) => {
   };
 
   return (
-    <div style={bannerStyle} className="">
+    <div style={bannerStyle} className="w-full">
       <h1 className="text-left mt-3 text-white font-bold">{title}</h1>
       {subheading && <h3 className="text-left text-white font-semibold">{subheading}</h3>}
           {data && <div className="banner-data">{data}</div>

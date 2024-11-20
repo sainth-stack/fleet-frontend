@@ -11,7 +11,7 @@ const Layout = ({ children }) => {
   return (
     <>
       <div className="flex flex-col h-screen">
-        <header className="" >
+        <header className=" sticky top-0 z-30" >
           <div
             className="shadow-md"
             style={{ width: "calc(100%)", background: "white" }}
@@ -19,7 +19,7 @@ const Layout = ({ children }) => {
             <Topmenu />
           </div>
         </header>
-        <div className="flex flex-grow" style={{}}>
+        <div className="flex  z-20 flex-grow" style={{}}>
           <aside className="w-25 bg-gray-100 shadow-md h-full fixed left-0 pt-16">
             <Sidemenu {...{ user }} />
           </aside>

@@ -23,7 +23,7 @@ const Dashboard = () => {
               backgroundColor="darkblue"
             />
 
-            <div className="flex justify-start gap-3 my-3">
+            <div className="flex justify-start  gap-3 my-3">
               <Card
                 title="Pro Plan"
                 subtitle="Most popular choice"
@@ -42,11 +42,11 @@ const Dashboard = () => {
                 progress={90}
               />
             </div>
-            <div className="flex gap-6 justify-center">
-              <div className="max-w-96 md:w-1/2 lg:w-1/2">
+            <div className="flex  gap-6  justify-around">
+              <div className="w-full md:w-1/2 lg:w-1/2">
                 <BarChartPage />
               </div>
-              <div className="max-w-96 md:w-1/2 lg:w-1/2">
+              <div className="w-full md:w-1/2 lg:w-1/2">
                 <WaveGraphPage />
               </div>
             </div>
