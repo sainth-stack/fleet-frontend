@@ -10,7 +10,7 @@ import DoughnutChartPage from "./Charts/DoughnutChartPage";
 const Dashboard = () => {
   return (
     <Layout>
-      <div className="flex h-screen">
+      <div className="flex h-screen ">
         {/* Left Sidebar (Fixed Width) */}
 
         {/* Main Content + Right Sidebar */}
@@ -52,7 +52,7 @@ const Dashboard = () => {
             </div>
           </div>
 
-          <div className="" style={{ minHeight: "100%",maxWidth:"35%" }}>
+          <div className="" style={{ minHeight: "100%",maxWidth:"25%" }}>
             {/* Right Sidebar */}
             <RightSidebar />
           </div>
