@@ -11,10 +11,10 @@ const Layout = ({ children }) => {
   return (
     <>
       <div className="flex flex-col h-screen">
-        <header className=" sticky top-0 z-30" >
+        <header className=" sticky top-0 z-30 min-w-100">
           <div
-            className="shadow-md"
-            style={{ width: "calc(100%)", background: "white" }}
+            className="shadow-md min-w-full "
+            style={{ background: "white" }}
           >
             <Topmenu />
           </div>

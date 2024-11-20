@@ -15,9 +15,9 @@ const Topmenu = () => {
   };
 
   return (
-    <div className="w-auto">
+    <div className="min-w-screen">
       <div
-        className="flex w-auto items-center justify-between p-3 border-b border-gray-200"
+        className="flex min-w-screen items-center justify-between p-3 border-b border-gray-200"
         style={{ height: "3rem " }}
       >
         <h2></h2>

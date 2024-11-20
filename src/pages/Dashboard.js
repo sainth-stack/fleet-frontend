@@ -42,7 +42,7 @@ const Dashboard = () => {
                 progress={90}
               />
             </div>
-            <div className="flex  gap-6  justify-around">
+            <div className="flex   gap-6  justify-around">
               <div className="w-full md:w-1/2 lg:w-1/2">
                 <BarChartPage />
               </div>
@@ -52,7 +52,7 @@ const Dashboard = () => {
             </div>
           </div>
 
-          <div className="" style={{ minHeight: "100%" }}>
+          <div className="" style={{ minHeight: "100%",maxWidth:"35%" }}>
             {/* Right Sidebar */}
             <RightSidebar />
           </div>

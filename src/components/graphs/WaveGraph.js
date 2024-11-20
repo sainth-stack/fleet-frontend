@@ -112,7 +112,7 @@ const WaveGraph = ({
   };
 
   return (
-    <div className="w-full mt-3 p-3 bg-white rounded-lg shadow-md">
+    <div className="min-w-96 mt-3 p-3 bg-white rounded-lg shadow-md">
       <Line data={chartData} options={chartOptions} />
     </div>
   );

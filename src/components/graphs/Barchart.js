@@ -15,7 +15,7 @@ ChartJS.register(CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend)
 
 const BarChart = ({ data, options }) => {
   return (
-    <div className="min-w-full mt-3 p-3 bg-white rounded-lg shadow-md">
+    <div className="min-w-96 mt-3 p-3  bg-white rounded-lg shadow-md">
       <Bar data={data} options={options} />
     </div>
   );

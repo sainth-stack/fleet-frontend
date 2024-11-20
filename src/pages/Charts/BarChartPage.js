@@ -79,8 +79,8 @@ const BarChartPage = () => {
     },
   };
   return (
-    <div className="mt-3  min-w-full">
-      <h2 className="text-lg  font-bold text-center mb-1">Monthly Expenses</h2>
+    <div className="mt-3  min-w-full ">
+      <h2 className="text-lg  font-bold te mb-1">Monthly Expenses</h2>
 
       <BarChart data={chartData} options={chartOptions} />
     </div>
