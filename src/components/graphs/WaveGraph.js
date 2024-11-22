@@ -1,5 +1,3 @@
-// src/components/graphs/WaveGraph.js
-
 import React from "react";
 import { Line } from "react-chartjs-2";
 import {
@@ -12,6 +10,7 @@ import {
   Tooltip,
   Legend,
 } from "chart.js";
+import ChartDataLabels from "chartjs-plugin-datalabels"; // Plugin for displaying data labels
 
 // Register chart components
 ChartJS.register(
@@ -21,32 +20,16 @@ ChartJS.register(
   LineElement,
   Title,
   Tooltip,
-  Legend
+  Legend,
+  ChartDataLabels // Register the datalabels plugin
 );
 
 const WaveGraph = ({
   title = "Trips by Month", // Title of the graph
   xAxisTitle = "Months", // X-axis title
   yAxisTitle = "Percentage of Trips", // Y-axis title
+  datasets = [], // Data for multiple waves
 }) => {
-  // Sample data representing percentages of trips by month
-  const generatePercentageData = () => {
-    return [
-      90,
-      10,
-      80,
-      30,
-      5,
-      35,
-      90,
-      10,
-      32,
-      6,
-      50,
-      5, // percentages of trips for each month
-    ];
-  };
-
   const chartData = {
     labels: [
       "Jan",
@@ -62,18 +45,7 @@ const WaveGraph = ({
       "Nov",
       "Dec",
     ], // X-axis labels (months)
-    datasets: [
-      {
-        label: "Trips by Month",
-        data: generatePercentageData(), // Y-axis values (percentage of trips)
-        borderColor: "red", // Line color
-        backgroundColor: "rgba(54, 162, 235, 0.2)", // Background color
-        fill: true, // Fill under the line to create the wave effect
-        tension: 0.4, // Smooth the line
-            pointRadius: 0,
-            // Points on the line
-      },
-    ],
+    datasets: datasets, // Use the datasets passed as props
   };
 
   const chartOptions = {
@@ -85,9 +57,22 @@ const WaveGraph = ({
         font: {
           size: 17,
         },
+        position: "top", // Position the title at the top
+        align: "start", // Align title to start (left)
       },
       legend: {
         display: true,
+      },
+      datalabels: {
+        display: true, // Show the data labels
+        color: "black", // Color of the labels
+        font: {
+          weight: "bold",
+          size: 12,
+        },
+        anchor: "end", // Anchor at the end of the point
+        align: "top", // Align labels at the top of the point
+        formatter: (value) => `${value}%`, // Format the value with "%"
       },
     },
     scales: {
@@ -101,12 +86,11 @@ const WaveGraph = ({
         },
       },
       y: {
+        display: true,
         title: {
           display: true,
           text: yAxisTitle,
         },
-
-       
       },
     },
   };

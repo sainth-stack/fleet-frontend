@@ -19,7 +19,7 @@ const Card = ({
       {/* Circular Progress Bar */}
       {progress && (
         <div className="relative flex items-center justify-center w-24 h-24 m-4">
-          <svg className="absolute inset-0 w-full h-full" viewBox="0 0 36 36">
+          <svg className="absolute  inset-0 w-full h-full" viewBox="0 0 36 36">
             <circle
               className="text-gray-200"
               strokeWidth="3"

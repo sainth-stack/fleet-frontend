@@ -6,32 +6,30 @@ import Sidemenu from "../Menus/Sidemenu";
 import Topmenu from "../Menus/Topmenu";
 
 const Layout = ({ children }) => {
-  const user = JSON.parse(localStorage.getItem('user'))
-  //console.log(user)
+  const user = JSON.parse(localStorage.getItem("user"));
+
   return (
-    <>
-      <div className="flex flex-col h-screen">
-        <header className=" sticky top-0 z-30 ">
-          <div
-            className="shadow-md  "
-            style={{ background: "white" }}
-          >
-            <Topmenu />
-          </div>
-        </header>
-        <div className="flex relative z-20 flex-grow" style={{}}>
-          <aside className="w-25 bg-gray-100 shadow-md sticky  left-0 pt-16">
-            <Sidemenu {...{ user }} />
-          </aside>
-          <div
-            className="flex flex-col flex-grow"
-            style={{ marginLeft: "200px" }}
-          >
-            <main className="flex-1 py-4 container ">{children}</main>
-          </div>
+    <div className="flex flex-col h-screen">
+      {/* Header */}
+      <header className="sticky top-0 z-40">
+        <div className="shadow-md bg-white">
+          <Topmenu />
         </div>
+      </header>
+
+      {/* Main Content */}
+      <div className="flex flex-grow overflow-auto">
+        {/* Left Menu (3 parts) */}
+        <aside className="flex-[2] bg-gray-100 shadow-md sticky left-0 pt-16 z-50 overflow-auto">          <Sidemenu {...{ user }} />
+        </aside>
+
+        {/* Main Content (6 parts) */}
+        <div className="flex-[10] py-4 px-4 overflow-auto">{children}</div>
+
+        {/* Right Menu (3 parts) */}
+        
       </div>
-    </>
+    </div>
   );
 };
 

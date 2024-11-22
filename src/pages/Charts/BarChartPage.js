@@ -1,5 +1,6 @@
 import React from "react";
 import BarChart from "../../components/graphs/Barchart";
+import ChartDataLabels from "chartjs-plugin-datalabels"; // Import the plugin
 
 const BarChartPage = () => {
   const chartData = {
@@ -17,17 +18,14 @@ const BarChartPage = () => {
       "Nov",
       "Dec",
     ],
-    // datasets: [
-
     datasets: [
       {
-        label: "Expenses ($)",
+        label: "Expenses",
         data: [500, 700, 400, 650, 800, 300, 450, 900, 1000, 750, 600, 400],
         backgroundColor: "#c0bec2",
-        // borderColor: "rgba(75, 192, 192, 1)",
         borderWidth: 1,
-        tension: 0.4, // Smooth the line
-        pointRadius: 5, // Points on the line
+        tension: 0.4,
+        pointRadius: 5,
       },
     ],
   };
@@ -37,10 +35,12 @@ const BarChartPage = () => {
     plugins: {
       title: {
         display: true,
-        text: "Monthly Expenses for 2024", // Chart title
+        text: "Expenses by Month", // Chart title
         font: {
           size: 16,
         },
+        position: "top", // Position the title at the top
+        align: "start",
       },
       legend: {
         position: "top",
@@ -50,38 +50,42 @@ const BarChartPage = () => {
           },
         },
       },
+      datalabels: {
+        display: true, // Show the data labels by default
+        color: "black", // Set the color of the labels
+        font: {
+          weight: "300",
+          size: 10,
+        },
+        formatter: (value) => value.toFixed(0), // Format the value to 2 decimal places
+        anchor: "end", // Place the label at the end of the bar
+        align: "top", // Align the label to the top of the bar
+      },
     },
     scales: {
       x: {
-        title: {
-          display: true,
-          text: "Months", // X-axis title
-        },
+        
         grid: {
-          display: false, // Remove grid lines on x-axis
+          display: false,
         },
         ticks: {
-          // Ensure labels are straight (horizontal)
-          autoSkip: false, // Avoid skipping labels
-          maxRotation: 0, // Prevent label rotation
-          minRotation: 0, // Prevent label rotation
+          autoSkip: false,
+          maxRotation: 0,
+          minRotation: 0,
         },
       },
       y: {
-        title: {
-          display: true,
-          text: "Expenses ($)", // Y-axis title
-        },
+       display: false,
         grid: {
-          display: false, // Remove grid lines on y-axis
+          display: false,
         },
       },
+      plugins: [ChartDataLabels], // Register the plugin
     },
   };
-  return (
-    <div className="mt-3  min-w-full ">
-      <h2 className="text-lg  font-bold te mb-1">Monthly Expenses</h2>
 
+  return (
+    <div className="mt-3 min-w-full ">
       <BarChart data={chartData} options={chartOptions} />
     </div>
   );

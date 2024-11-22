@@ -87,8 +87,8 @@ const Sidemenu = ({ user }) => {
 
   return (
     <div
-      className={`absolute container  overflow-auto inset-y-0 left-0 shadow-lg transition-all duration-300 bg-white border-r border-gray-200 z-30 ${
-        isOpen ? "w-44" : "w-24"
+      className={`absolute container z-40  overflow-auto inset-y-0 left-0 shadow-lg transition-all duration-300 bg-white border-r border-gray-200  ${
+        isOpen ? "w-full" : "w-24"
       }`}
     >
       <div className="mt-16">
