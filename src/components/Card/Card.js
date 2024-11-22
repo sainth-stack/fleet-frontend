@@ -11,12 +11,14 @@ const Card = ({
   styles,
 }) => {
   return (
-    <div className={`${bgColor} flex  justify-start items-center bg-white border border-gray-200 rounded-lg shadow-lg w-full max-w-xs sm:max-w-md`}>
+    <div
+      className={`${bgColor} flex justify-center items-center bg-white border border-gray-200 rounded-lg shadow-lg w-full max-w-xs sm:max-w-md`}
+    >
       {/* Card Content */}
 
       {/* Circular Progress Bar */}
       {progress && (
-        <div className="relative  flex  items-center justify-center w-24 h-24 m-4">
+        <div className="relative flex items-center justify-center w-24 h-24 m-4">
           <svg className="absolute inset-0 w-full h-full" viewBox="0 0 36 36">
             <circle
               className="text-gray-200"
@@ -38,18 +40,23 @@ const Card = ({
               r="16"
               cx="18"
               cy="18"
+              style={{
+                transform: "rotate(-90deg)", // Rotate the stroke to start from the top-center
+                transformOrigin: "50% 50%", // Ensure the rotation is centered
+              }}
             />
           </svg>
+          {/* Position percentage at top-center */}
           <span className="text-blue-500 font-semibold">{progress}%</span>
         </div>
       )}
 
       {/* Title, Price, Subtitle */}
-      <div className=" flex-grow ml-2">
+      <div className={`flex-grow ml-2 ${progress?"":"text-center"}`}>
         <h3 className={`text-sm font-semibold text-gray-800 ${styles}`}>
           {title}
         </h3>
-        <p className={`mt-2 text-md font-bold text-blue-500 ${styles}`}>
+        <p className={`mt-2 text-md font-bold  ${styles}`}>
           ${price}
         </p>
         <small className="text-sm text-gray-500">{subtitle}</small>

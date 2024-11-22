@@ -28,33 +28,33 @@ export const headers = [
 
 export const tableData = [
   {
-  "id": 1,
-  "date": "01 January 2023",
-  "year": 2023,
-  "month": "Jan",
-  "day": 1,
-  "driver": "Antoni",
-  "buddy": "Mike",
-  "vehicle": "72-0466/0467",
-  "distance": 140,
-  "tripClassify": "Close",
-  "distanceTraveled": 35,
-  "from": "Tirupathi",
-  "to": "Chitoor",
-  "busType": "Express",
-  "driverWage": "₹33,600.00",
-  "buddyWage": "₹33,600.00",
-  "driverSalary": "₹33,600.00",
-  "buddySalary": "₹33,600.00",
-  "weight": 14,
-  "hiredTransportation": "No",
-  "fuelConsumption": 35,
-  "fuelCost": "₹3,395.00",
-  "busCapacity": 60,
-  "busOccupancy": 45
-},
+    id: 1,
+    date: "01 January 2023",
+    year: 2023,
+    month: "Jan",
+    day: 1,
+    driver: "Antoni",
+    buddy: "Mike",
+    vehicle: "72-0466/0467",
+    distance: 140,
+    tripClassify: "Close",
+    distanceTraveled: "Return",
+    from: "Tirupathi",
+    to: "Chitoor",
+    busType: "Express",
+    driverWage: "₹33,600.00",
+    buddyWage: "₹33,600.00",
+    driverSalary: "₹33,600.00",
+    buddySalary: "₹33,600.00",
+    weight: 14,
+    hiredTransportation: "No",
+    fuelConsumption: 35,
+    fuelCost: "₹3,395.00",
+    busCapacity: 60,
+    busOccupancy: 45,
+  },
 
-   {
+  {
     id: 2,
     date: "01 February 2023",
     year: 2023,
@@ -65,7 +65,8 @@ export const tableData = [
     vehicle: "72-1001/1002",
     distance: 76,
     tripClassify: "Close",
-    distanceTraveled: 19,
+    distanceTraveled: "Return",
+
     from: "Vijayawada",
     to: "Guntur",
     busType: "Deluxe",
@@ -78,7 +79,7 @@ export const tableData = [
     fuelConsumption: 19,
     fuelCost: "₹1,843.00",
     busCapacity: 60,
-    busOccupancy: 30
+    busOccupancy: 30,
   },
   {
     id: 3,
@@ -91,7 +92,8 @@ export const tableData = [
     vehicle: "72-0466/0467",
     distance: 1700,
     tripClassify: "Far",
-    distanceTraveled: 425,
+    distanceTraveled: "Return",
+
     from: "Chitoor",
     to: "Visakhapatnam",
     busType: "Garuda",
@@ -104,7 +106,7 @@ export const tableData = [
     fuelConsumption: 425,
     fuelCost: "₹41,225.00",
     busCapacity: 60,
-    busOccupancy: 49
+    busOccupancy: 49,
   },
   {
     id: 4,
@@ -117,7 +119,8 @@ export const tableData = [
     vehicle: "72-1001/1002",
     distance: 485,
     tripClassify: "Regular",
-    distanceTraveled: 121,
+    distanceTraveled: "One-Way",
+
     from: "Guntur",
     to: "Srikakulam",
     busType: "Super Luxury",
@@ -130,7 +133,7 @@ export const tableData = [
     fuelConsumption: 121,
     fuelCost: "₹11,761.25",
     busCapacity: 60,
-    busOccupancy: 60
+    busOccupancy: 60,
   },
   {
     id: 5,
@@ -143,7 +146,8 @@ export const tableData = [
     vehicle: "72-0466/0467",
     distance: 600,
     tripClassify: "Far",
-    distanceTraveled: 150,
+    distanceTraveled: "One-Way",
+
     from: "Ongole",
     to: "Srikakulam",
     busType: "Garuda",
@@ -156,7 +160,7 @@ export const tableData = [
     fuelConsumption: 150,
     fuelCost: "₹14,550.00",
     busCapacity: 60,
-    busOccupancy: 60
+    busOccupancy: 60,
   },
   {
     id: 6,
@@ -169,7 +173,8 @@ export const tableData = [
     vehicle: "72-1001/1002",
     distance: 551,
     tripClassify: "Far",
-    distanceTraveled: 138,
+    distanceTraveled: "One-Way",
+
     from: "Vijayanagaram",
     to: "Ongole",
     busType: "Super Luxury",
@@ -182,7 +187,7 @@ export const tableData = [
     fuelConsumption: 138,
     fuelCost: "₹13,361.75",
     busCapacity: 60,
-    busOccupancy: 45
+    busOccupancy: 45,
   },
   {
     id: 7,
@@ -195,7 +200,8 @@ export const tableData = [
     vehicle: "72-0466/0467",
     distance: 959,
     tripClassify: "Close",
-    distanceTraveled: 240,
+    distanceTraveled: "One-Way",
+
     from: "Ananthapuram",
     to: "Srikakulam",
     busType: "Garuda",
@@ -208,7 +214,7 @@ export const tableData = [
     fuelConsumption: 240,
     fuelCost: "₹23,255.75",
     busCapacity: 60,
-    busOccupancy: 50
+    busOccupancy: 50,
   },
   {
     id: 8,
@@ -221,7 +227,8 @@ export const tableData = [
     vehicle: "72-1001/1002",
     distance: 445,
     tripClassify: "Close",
-    distanceTraveled: 111,
+    distanceTraveled: "Return",
+
     from: "Chitoor",
     to: "Guntur",
     busType: "Super Luxury",
@@ -234,7 +241,7 @@ export const tableData = [
     fuelConsumption: 111,
     fuelCost: "₹10,791.25",
     busCapacity: 60,
-    busOccupancy: 30
+    busOccupancy: 30,
   },
   {
     id: 9,
@@ -247,22 +254,24 @@ export const tableData = [
     vehicle: "72-0466/0467",
     distance: 298,
     tripClassify: "Close",
-    distanceTraveled: 75,
+    distanceTraveled: "One-Way",
+
     from: "Guntur",
     to: "Kurnool",
     busType: "Deluxe",
     driverWage: "₹33,600.00",
     buddyWage: "₹8,400.00",
-    driverSalary: "₹33,600. ",   buddySalary: "₹8,400.00",
+    driverSalary: "₹33,600. ",
+    buddySalary: "₹8,400.00",
     weight: 15,
     hiredTransportation: "Yes",
     fuelConsumption: 75,
     fuelCost: "₹7,226.50",
     busCapacity: 60,
-    busOccupancy: 32
-    },
-  
-    /* 10 */
+    busOccupancy: 32,
+  },
+
+  /* 10 */
 
   {
     id: 10,
@@ -288,7 +297,7 @@ export const tableData = [
     distanceInKm: 65,
     totalAmount: "₹6,256.50",
     someValue1: 60,
-    someValue2: 28
+    someValue2: 28,
   },
   {
     id: 11,
@@ -314,7 +323,7 @@ export const tableData = [
     distanceInKm: 18,
     totalAmount: "₹1,697.50",
     someValue1: 60,
-    someValue2: 47
+    someValue2: 47,
   },
   {
     id: 12,
@@ -340,7 +349,7 @@ export const tableData = [
     distanceInKm: 61,
     totalAmount: "₹5,941.25",
     someValue1: 60,
-    someValue2: 54
+    someValue2: 54,
   },
   {
     id: 13,
@@ -366,7 +375,7 @@ export const tableData = [
     distanceInKm: 35,
     totalAmount: "₹3,395.00",
     someValue1: 60,
-    someValue2: 34
+    someValue2: 34,
   },
   {
     id: 14,
@@ -392,7 +401,7 @@ export const tableData = [
     distanceInKm: 19,
     totalAmount: "₹1,843.00",
     someValue1: 60,
-    someValue2: 43
+    someValue2: 43,
   },
   {
     id: 15,
@@ -418,7 +427,7 @@ export const tableData = [
     distanceInKm: 425,
     totalAmount: "₹41,225.00",
     someValue1: 60,
-    someValue2: 50
+    someValue2: 50,
   },
   {
     id: 16,
@@ -444,7 +453,7 @@ export const tableData = [
     distanceInKm: 121,
     totalAmount: "₹11,761.25",
     someValue1: 60,
-    someValue2: 49
+    someValue2: 49,
   },
   {
     id: 17,
@@ -470,7 +479,7 @@ export const tableData = [
     distanceInKm: 150,
     totalAmount: "₹14,550.00",
     someValue1: 60,
-    someValue2: 31
+    someValue2: 31,
   },
   {
     id: 18,
@@ -496,7 +505,7 @@ export const tableData = [
     distanceInKm: 138,
     totalAmount: "₹13,386.00",
     someValue1: 60,
-    someValue2: 39
+    someValue2: 39,
   },
   {
     id: 19,
@@ -522,7 +531,7 @@ export const tableData = [
     distanceInKm: 240,
     totalAmount: "₹5,827.50",
     someValue1: 60,
-    someValue2: 55
+    someValue2: 55,
   },
   {
     id: 20,
@@ -548,14 +557,10 @@ export const tableData = [
     distanceInKm: 286,
     totalAmount: "₹9,561.00",
     someValue1: 60,
-    someValue2: 44
-  }
-,
+    someValue2: 44,
+  },
+  //   20
 
-//   20
-  
-  
-  
   {
     id: 21,
     date: "01 September 2024",
@@ -580,7 +585,7 @@ export const tableData = [
     distanceInKm: 75,
     totalAmount: "₹7,226.50",
     someValue1: 60,
-    someValue2: 54
+    someValue2: 54,
   },
   {
     id: 22,
@@ -606,7 +611,7 @@ export const tableData = [
     distanceInKm: 65,
     totalAmount: "₹6,256.50",
     someValue1: 60,
-    someValue2: 23
+    someValue2: 23,
   },
   {
     id: 23,
@@ -632,7 +637,7 @@ export const tableData = [
     distanceInKm: 18,
     totalAmount: "₹1,697.50",
     someValue1: 60,
-    someValue2: 32
+    someValue2: 32,
   },
   {
     id: 24,
@@ -658,10 +663,8 @@ export const tableData = [
     distanceInKm: 61,
     totalAmount: "₹5,941.25",
     someValue1: 60,
-    someValue2: 60
-  }
-
-
+    someValue2: 60,
+  },
 ];
 
 

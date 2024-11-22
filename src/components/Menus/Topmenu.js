@@ -15,12 +15,12 @@ const Topmenu = () => {
   };
 
   return (
-    <div className="min-w-screen">
+    <div className="w-auto">
       <div
-        className="flex min-w-screen items-center justify-between p-3 border-b border-gray-200"
-        style={{ height: "3rem " }}
+        className="flex  items-center justify-between p-3 border-b border-gray-200"
+        style={{ height: "4rem " }}
       >
-        <h2></h2>
+        <h2> </h2>
         <div className="flex items-center space-x-4">
           {/* Notifications */}
           <div className="flex items-center justify-center w-10 h-10 rounded-full bg-white shadow-md">

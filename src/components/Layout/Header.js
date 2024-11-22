@@ -5,8 +5,8 @@ import Sidemenu from "../Menus/Sidemenu";
 const Header = ({user}) => {
   return (
     <>
-      <div className=" fixed min-w-full top-0 z-30 bg-gray-900 h-50 ">
-        <div className="flex min-w-screen " style={{minWidth:"100%"}}>
+      <div className="   top-0 z-30 bg-gray-900 h-50 ">
+        <div className="flex  " >
           <Topmenu />
         </div>
         <div className="top-20">

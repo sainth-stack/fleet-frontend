@@ -18,28 +18,28 @@ const Dashboard = () => {
           {/* Main Content */}
           <div className="flex-grow w-auto py-3 px-4">
             <Banner
-              title="Fleet Management Transportation & Logistics to My App"
-              subheading="Dashboard 2024"
+              title="Fleet Management Transportation & Logistics "
+              subheading=" Sample Dashboard 2024"
               backgroundColor="darkblue"
             />
 
-            <div className="flex justify-start  gap-3 my-3">
+            <div className="flex justify-center  gap-3 my-3">
               <Card
-                title="Pro Plan"
-                subtitle="Most popular choice"
-                price={29.99}
+                title="Total Expenses"
+                subtitle="Thai baht"
+                price={"27,200"}
               />
               <Card
-                title="Starter Plan"
-                subtitle="Great for beginners"
-                price={19.99}
-                progress={50}
+                title="Total Salaries"
+                subtitle="Thai baht"
+                price={"12,100"}
+                progress={44}
               />
               <Card
-                title="Enterprise"
-                subtitle="Advanced features"
-                price={99.99}
-                progress={90}
+                title="Total Wage's"
+                subtitle="Thai baht"
+                price={"15,100"}
+                progress={56}
               />
             </div>
             <div className="flex   gap-6  justify-around">
@@ -52,7 +52,7 @@ const Dashboard = () => {
             </div>
           </div>
 
-          <div className="" style={{ minHeight: "100%",maxWidth:"25%" }}>
+          <div className="" style={{ minHeight: "100%", maxWidth: "25%" }}>
             {/* Right Sidebar */}
             <RightSidebar />
           </div>
