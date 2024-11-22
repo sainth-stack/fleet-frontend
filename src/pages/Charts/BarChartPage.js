@@ -37,12 +37,13 @@ const BarChartPage = () => {
         display: true,
         text: "Expenses by Month", // Chart title
         font: {
-          size: 16,
+          size: 12,
         },
         position: "top", // Position the title at the top
         align: "start",
       },
       legend: {
+        display:false,
         position: "top",
         labels: {
           font: {

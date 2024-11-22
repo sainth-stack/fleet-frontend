@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Layout from "../components/Layout/Layout";
 import Banner from "../components/Banner/Banner";
 import Card from "../components/Card/Card";
@@ -6,8 +6,41 @@ import RightSidebar from "../components/RightSidebar/RightSidebar";
 import BarChartPage from "./Charts/BarChartPage";
 import WaveGraphPage from "./Charts/WaveGraphPage ";
 import DoughnutChartPage from "./Charts/DoughnutChartPage";
-
+import { tableData } from "../data/TableData";
 const Dashboard = () => {
+  const [totalTips, setTotalTips] = useState(tableData.length);
+
+  const [expenses, setExpenses] = useState("₹0");
+  const [salary, setSalary] = useState("₹0");
+
+  const parseCurrency = (value) => {
+    return value
+      ? parseFloat(value.replace("₹", "").replace(",", "").trim())
+      : 0;
+  };
+
+ useEffect(() => {
+   // Calculate total expenses and total salaries across all trips
+   const { totalExpenses, totalSalaries } = tableData.reduce(
+     (acc, { driverSalary, fuelCost, buddySalary }) => {
+       /* thsis for total expenses */
+
+       acc.totalExpenses +=
+         parseCurrency(driverSalary) +
+         parseCurrency(fuelCost) +
+         parseCurrency(buddySalary);
+       /* thsis for salaries */
+       acc.totalSalaries += parseCurrency(driverSalary);
+       return acc;
+     },
+     { totalExpenses: 0, totalSalaries: 0 }
+   );
+
+   // Set state for total expenses and total salaries
+   setExpenses(`₹${totalExpenses.toLocaleString()}`);
+   setSalary(`₹${totalSalaries.toLocaleString()}`);
+ }, [tableData]);
+
   return (
     <Layout>
       <div className="flex h-screen ">
@@ -27,18 +60,18 @@ const Dashboard = () => {
               <Card
                 title="Total Expenses"
                 subtitle="Thai baht"
-                price={"27,200"}
+                price={expenses}
               />
               <Card
                 title="Total Salaries"
                 subtitle="Thai baht"
-                price={"12,100"}
+                price={salary}
                 progress={44}
               />
               <Card
-                title="Total Wage's"
+                title="Total Number of Trips"
                 subtitle="Thai baht"
-                price={"15,100"}
+                price={totalTips}
                 progress={56}
               />
             </div>

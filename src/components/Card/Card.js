@@ -57,7 +57,7 @@ const Card = ({
           {title}
         </h3>
         <p className={`mt-2 text-md font-bold  ${styles}`}>
-          ${price}
+         {price}
         </p>
         <small className="text-sm text-gray-500">{subtitle}</small>
 

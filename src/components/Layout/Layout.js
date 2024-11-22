@@ -20,11 +20,11 @@ const Layout = ({ children }) => {
       {/* Main Content */}
       <div className="flex flex-grow overflow-auto">
         {/* Left Menu (3 parts) */}
-        <aside className="flex-[2] bg-gray-100 shadow-md sticky left-0 pt-16 z-50 overflow-auto">          <Sidemenu {...{ user }} />
+        <aside className="flex-[1.5] bg-gray-100 shadow-md sticky left-0 pt-16 z-50 overflow-auto">          <Sidemenu {...{ user }} />
         </aside>
 
         {/* Main Content (6 parts) */}
-        <div className="flex-[10] py-4 px-4 overflow-auto">{children}</div>
+        <div className="flex-[10.5] py-4 px-4 overflow-auto">{children}</div>
 
         {/* Right Menu (3 parts) */}
         

@@ -19,7 +19,7 @@ const CustomTable = ({ headers, data }) => {
         </thead>
 
         {/* Table Body */}
-        <tbody>
+        <tbody className="">
           {data.map((row, rowIndex) => (
             <tr key={rowIndex} className="border-t hover:bg-gray-50">
               {Object.values(row).map((cell, cellIndex) => (

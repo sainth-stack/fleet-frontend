@@ -31,7 +31,7 @@ const Sidemenu = ({ user }) => {
     default: [
       { name: "dashboard", icon: <MdDashboard />, path: "/dashboard" },
       { name: "table", icon: <FaBuilding />, path: "/table" },
-      { name: "schedule", icon: <FaBuilding />, path: "/schedule" },
+      // { name: "schedule", icon: <FaBuilding />, path: "/schedule" },
       // { name: "drivers", icon: <FaBuilding />, path: "/drivers" },
 
       /*  { name: "Manual Tasks", icon: <FaTasks />, path: "/tasks" },
@@ -87,7 +87,7 @@ const Sidemenu = ({ user }) => {
 
   return (
     <div
-      className={`absolute container z-40  overflow-auto inset-y-0 left-0 shadow-lg transition-all duration-300 bg-white border-r border-gray-200  ${
+      className={`absolute container z-40 overflow-auto inset-y-0 left-0 shadow-lg transition-all duration-300 bg-white border-r border-gray-200  ${
         isOpen ? "w-full" : "w-24"
       }`}
     >
@@ -106,7 +106,7 @@ const Sidemenu = ({ user }) => {
               >
                 <span className="text-lg">{item.icon}</span>
                 {isOpen && (
-                  <span className="text-sm font-medium">{item.name}</span>
+                  <span className="text-lg capitalize font-medium">{item.name}</span>
                 )}
               </Link>
             </li>
@@ -118,7 +118,7 @@ const Sidemenu = ({ user }) => {
               <ProfileCard name="Antony" imageSrc={driver1} />
             </>
           )}
-          <MonthPicker />
+          {/* <MonthPicker /> */}
         </ul>
       </div>
     </div>

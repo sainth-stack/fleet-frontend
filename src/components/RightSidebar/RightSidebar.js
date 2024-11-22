@@ -7,7 +7,7 @@ import VerticalMultiGraph from '../../pages/Charts/VerticalMultiGraphPage';
 const RightSidebar = () => {
   return (
     <>
-      <div className="shadow-md  mr-3  " style={{minHeight:"100%"}}>
+      <div className="shadow-md  mr-3 mt-3  " style={{minHeight:"100%"}}>
         <div className="">
           <Card
             bgColor="bg-yellow-50"
@@ -20,7 +20,7 @@ const RightSidebar = () => {
           />
         </div>
         <div className="min-h-40 overflow-auto">
-          <MultiBarChartPage />
+          {/* <MultiBarChartPage /> */}
           <DoughnutChartPage />
           <VerticalMultiGraph />
         </div>

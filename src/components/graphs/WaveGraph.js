@@ -51,23 +51,26 @@ const WaveGraph = ({
   const chartOptions = {
     responsive: true,
     plugins: {
+      
       title: {
         display: true,
         text: title,
+        
         font: {
-          size: 17,
+          size: 12,
         },
         position: "top", // Position the title at the top
-        align: "start", // Align title to start (left)
+        align: "start",
+        // Align title to start (left)
       },
       legend: {
-        display: true,
+        display: false,
       },
       datalabels: {
         display: true, // Show the data labels
         color: "black", // Color of the labels
         font: {
-          weight: "bold",
+          weight: "300",
           size: 12,
         },
         anchor: "end", // Anchor at the end of the point
@@ -78,7 +81,7 @@ const WaveGraph = ({
     scales: {
       x: {
         title: {
-          display: true,
+          display: false,
           text: xAxisTitle,
         },
         grid: {
@@ -86,7 +89,7 @@ const WaveGraph = ({
         },
       },
       y: {
-        display: true,
+        display: false,
         title: {
           display: true,
           text: yAxisTitle,
