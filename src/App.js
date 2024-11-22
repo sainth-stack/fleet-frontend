@@ -9,6 +9,7 @@ import Schedule from './pages/Schedule';
 function App() {
   return (
     <Routes>
+      <Route path="/" element={<Dashboard />} />
       <Route path="/table" element={<TablePage />} />
       <Route path="/dashboard" element={<Dashboard />} />
       <Route path="/schedule" element={<Schedule />} />
