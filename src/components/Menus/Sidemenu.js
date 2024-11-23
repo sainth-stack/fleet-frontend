@@ -112,12 +112,12 @@ const Sidemenu = ({ user }) => {
             </li>
           ))}
 
-          {activeItem === "/dashboard" && (
+          {/* {activeItem === "/dashboard" && (
             <>
               <ProfileCard name="Antony" imageSrc={driver1} />
               <ProfileCard name="Antony" imageSrc={driver1} />
             </>
-          )}
+          )} */}
           {/* <MonthPicker /> */}
         </ul>
       </div>

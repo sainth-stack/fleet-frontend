@@ -5,11 +5,11 @@ const Leaderboard = ({ data }) => {
     (a, b) => a.fuelConsumption - b.fuelConsumption
   );
 
-    const top5Data = sortedData.slice(0, 5);
+  const top5Data = sortedData.slice(0, 5);
   return (
     <div className="p-3 max-w-xl mb-3  mx-auto bg-gray-50 rounded-lg shadow-lg">
-      <h2 className="text-center text-lg font-semibold text-gray-800 mb-6">
-        Fuel Consumption Leaderboard
+      <h2 className="text-start text-lg font-semibold text-gray-800 mb-6">
+        Top Leaderboard
       </h2>
       <div className="space-y-2 ">
         {top5Data.length > 0 ? (

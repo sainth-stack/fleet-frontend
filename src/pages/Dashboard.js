@@ -61,6 +61,7 @@ const Dashboard = () => {
                 title="Total Expenses"
                 subtitle="Thai baht"
                 price={expenses}
+                progress={82}
               />
               <Card
                 title="Total Salaries"

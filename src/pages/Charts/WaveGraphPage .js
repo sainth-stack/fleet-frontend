@@ -27,9 +27,9 @@ const WaveGraphPage = () => {
 
 
   return (
-    <div className="mt-3 min-w-full ">
+    <div className="mt-3 min-w-full">
       <WaveGraph
-        title="Trips by Month"
+        title="Bus Capacity va Bus Occupancy"
         xAxisTitle="Months"
         yAxisTitle="Percentage of Trips"
         datasets={datasets} // Pass the datasets here

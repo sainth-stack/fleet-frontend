@@ -2,15 +2,15 @@ import React from "react";
 
 const CustomTable = ({ headers, data }) => {
   return (
-    <div className="overflow-auto  ml-3 max-w-full max-h-[80vh] scrollbar-thin scrollbar-thumb-gray-400 scrollbar-track-gray-100">
-      <table className="table-auto w-full  text-xs text-left">
+    <div className="overflow-x-auto overflow-y-auto ml-3 max-h-[80vh] w-full scrollbar-thin scrollbar-thumb-gray-400/50 scrollbar-track-gray-100/20 rounded-lg shadow-sm">
+      <table className="min-w-full table-auto text-sm text-gray-700">
         {/* Table Header */}
-        <thead className="bg-gray-100  sticky top-0" >
+        <thead className="bg-gray-50 sticky top-0 shadow-sm">
           <tr>
             {headers.map((header, index) => (
               <th
                 key={index}
-                className="px-3 py-2 border border-gray-300 text-left"
+                className="px-6 py-4 font-semibold text-gray-900 border-b border-gray-200"
               >
                 {header}
               </th>
@@ -19,13 +19,13 @@ const CustomTable = ({ headers, data }) => {
         </thead>
 
         {/* Table Body */}
-        <tbody className="">
+        <tbody className="bg-white divide-y divide-gray-200">
           {data.map((row, rowIndex) => (
-            <tr key={rowIndex} className="border-t hover:bg-gray-50">
+            <tr key={rowIndex} className="transition-colors hover:bg-gray-50">
               {Object.values(row).map((cell, cellIndex) => (
                 <td
                   key={cellIndex}
-                  className="px-3 py-2 border border-gray-300 truncate"
+                  className="px-6 py-4 whitespace-nowrap"
                 >
                   {cell}
                 </td>

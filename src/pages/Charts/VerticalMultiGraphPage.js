@@ -115,7 +115,7 @@ const VerticalMultiGraph = () => {
 
   return (
     <>
-      <div className="my-2 mx-auto rounded-md min-h-48 mb-2 flex justify-center overflow-auto">
+      <div className="my-2 mx-auto rounded-md min-h-48 mb-2 flex justify-center overflow-auto px-1">
         <MultiBarChart data={chartData} options={chartOptions} />
       </div>
     </>

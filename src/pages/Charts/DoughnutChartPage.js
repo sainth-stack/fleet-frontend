@@ -79,7 +79,7 @@ const PieChartPage = () => {
   return (
     <>
       <h2 className="text-lg font-bold text-center mb-1">Sales Distribution</h2>
-      <div className="flex justify-center items-start gap-6">
+      <div className="flex justify-center items-start gap-6 px-1">
         {/* Pie Chart */}
         <div className="my-2 w-44 rounded-md shadow-sm h-44 flex justify-center">
           <PieChart data={chartData} options={chartOptions} />
