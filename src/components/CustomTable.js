@@ -19,13 +19,13 @@ const CustomTable = ({ headers, data }) => {
         </thead>
 
         {/* Table Body */}
-        <tbody className="bg-white divide-y divide-gray-200">
+        <tbody className="bg-white divide-y divide-gray-300">
           {data.map((row, rowIndex) => (
-            <tr key={rowIndex} className="transition-colors hover:bg-gray-50">
+            <tr key={rowIndex} className=" transition-colors hover:bg-gray-50 ">
               {Object.values(row).map((cell, cellIndex) => (
                 <td
                   key={cellIndex}
-                  className="px-6 py-4 whitespace-nowrap"
+                  className="px-6 py-3 whitespace-nowrap "
                 >
                   {cell}
                 </td>

@@ -1,9 +1,13 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import BarChart from "../../components/graphs/Barchart";
 import ChartDataLabels from "chartjs-plugin-datalabels"; // Import the plugin
+import { tableData } from "../../data/TableData";
 
 const BarChartPage = () => {
-  const chartData = {
+  const parseCurrency = (value) =>
+    value ? +value.replace(/[₹,]/g, "").trim() : 0;
+
+  const [chartData, setChartData] = useState({
     labels: [
       "Jan",
       "Feb",
@@ -21,14 +25,37 @@ const BarChartPage = () => {
     datasets: [
       {
         label: "Expenses",
-        data: [500, 700, 400, 650, 800, 300, 450, 900, 1000, 750, 600, 400],
-        backgroundColor: "#c0bec2",
+        data: Array(12).fill(0), // Initialize with 0s
+        backgroundColor: "#0000f2",
         borderWidth: 1,
         tension: 0.4,
         pointRadius: 5,
       },
     ],
-  };
+  });
+
+  useEffect(() => {
+    // Initialize monthly expenses array
+    const monthlyExpenses = Array(12).fill(0);
+
+    // Populate monthly expenses
+    for (const { date, fuelCost } of tableData) {
+      const monthIndex = new Date(date).getMonth(); // 0-11 index for the month
+      monthlyExpenses[monthIndex] += parseCurrency(fuelCost);
+    }
+
+    // Update chart data with new monthly expenses
+    setChartData((prev) => ({
+      ...prev,
+      datasets: [
+        {
+          ...prev.datasets[0],
+          data: monthlyExpenses,
+        },
+      ],
+    }));
+  }, [tableData]);
+
 
   const chartOptions = {
     responsive: true,

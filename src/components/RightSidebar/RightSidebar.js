@@ -16,7 +16,7 @@ const RightSidebar = () => {
         <div className="min-h-40 overflow-auto">
           {/* <MultiBarChartPage /> */}
           <DoughnutChartPage />
-          <VerticalMultiGraph />
+          {/* <VerticalMultiGraph /> */}
         </div>
       </div>
     </>
