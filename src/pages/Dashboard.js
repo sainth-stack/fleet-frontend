@@ -8,6 +8,7 @@ import WaveGraphPage from "./Charts/WaveGraphPage ";
 import DoughnutChartPage from "./Charts/DoughnutChartPage";
 import { tableData } from "../data/TableData";
 const Dashboard = () => {
+  const [selectedMonth, setSelectedMonth] = useState('all');
   const [totalTips, setTotalTips] = useState(tableData.length);
 
   const [expenses, setExpenses] = useState("₹0");
@@ -19,27 +20,34 @@ const Dashboard = () => {
       : 0;
   };
 
- useEffect(() => {
-   // Calculate total expenses and total salaries across all trips
-   const { totalExpenses, totalSalaries } = tableData.reduce(
-     (acc, { driverSalary, fuelCost, buddySalary }) => {
-       /* thsis for total expenses */
+  const months = [
+    'all',
+    'January', 'February', 'March', 'April',
+    'May', 'June', 'July', 'August',
+    'September', 'October', 'November', 'December'
+  ];
 
-       acc.totalExpenses +=
-         parseCurrency(driverSalary) +
-         parseCurrency(fuelCost) +
-         parseCurrency(buddySalary);
-       /* thsis for salaries */
-       acc.totalSalaries += parseCurrency(driverSalary);
-       return acc;
-     },
-     { totalExpenses: 0, totalSalaries: 0 }
-   );
+  useEffect(() => {
+    const filteredData = selectedMonth === 'all'
+      ? tableData
+      : tableData;
 
-   // Set state for total expenses and total salaries
-   setExpenses(`₹${totalExpenses.toLocaleString()}`);
-   setSalary(`₹${totalSalaries.toLocaleString()}`);
- }, [tableData]);
+    const { totalExpenses, totalSalaries } = filteredData.reduce(
+      (acc, { driverSalary, fuelCost, buddySalary }) => {
+        acc.totalExpenses +=
+          parseCurrency(driverSalary) +
+          parseCurrency(fuelCost) +
+          parseCurrency(buddySalary);
+        acc.totalSalaries += parseCurrency(driverSalary);
+        return acc;
+      },
+      { totalExpenses: 0, totalSalaries: 0 }
+    );
+
+    setExpenses(`₹${totalExpenses.toLocaleString()}`);
+    setSalary(`₹${totalSalaries.toLocaleString()}`);
+    setTotalTips(filteredData.length);
+  }, [selectedMonth, tableData]);
 
   return (
     <Layout>
@@ -50,6 +58,19 @@ const Dashboard = () => {
         <div className="flex-grow flex">
           {/* Main Content */}
           <div className="flex-grow w-auto py-3 px-4">
+            <div className="mb-4 px-2">
+              <select
+                value={selectedMonth}
+                onChange={(e) => setSelectedMonth(e.target.value)}
+                className="p-2 border rounded-md bg-white"
+              >
+                {months.map((month) => (
+                  <option key={month} value={month}>
+                    {month.charAt(0).toUpperCase() + month.slice(1)}
+                  </option>
+                ))}
+              </select>
+            </div>
             <Banner
               title="Fleet Management Transportation & Logistics "
               subheading=" Sample Dashboard 2024"
