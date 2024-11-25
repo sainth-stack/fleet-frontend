@@ -8,9 +8,9 @@ const PieChartPage = () => {
       {
         data: [16, 2, 6], // Percentage values for each sector
         backgroundColor: [
-          "#fca503", // Light Gold
-          "#03fcca", // Light Green
-          "#ADD8E6", // Light Blue
+          "#FF6B6B", // Warm Red
+          "#4CAF50", // Distinct Green
+          "#87CEEB", // Sky Blue (changed from #2196F3)
         ],
         // Colors for each sector
         borderWidth: 1, // Border around the sectors
@@ -78,7 +78,7 @@ const PieChartPage = () => {
 
   return (
     <>
-      <h2 className="text-lg font-bold text-center mb-1">Sales Distribution</h2>
+      <h2 className="text-lg font-bold text-center mb-1">Distance by Distribution</h2>
       <div className="flex justify-center items-start gap-6 px-1">
         {/* Pie Chart */}
         <div className="my-2 w-44 rounded-md shadow-sm h-44 flex justify-center">

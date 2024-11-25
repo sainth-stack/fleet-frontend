@@ -80,19 +80,19 @@ const Dashboard = () => {
             <div className="flex justify-center  gap-3 my-3">
               <Card
                 title="Total Expenses"
-                subtitle="Thai baht"
+                subtitle=""
                 price={expenses}
                 progress={82}
               />
               <Card
                 title="Total Salaries"
-                subtitle="Thai baht"
+                subtitle=""
                 price={salary}
                 progress={44}
               />
               <Card
                 title="Total Number of Trips"
-                subtitle="Thai baht"
+                subtitle=""
                 price={totalTips}
                 progress={56}
               />
