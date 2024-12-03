@@ -31,7 +31,7 @@ const Leaderboard = ({ data }) => {
       <div className="flex items-center justify-center space-x-4 mb-6">
         {/* Title Section */}
         <h2 className="text-center text-xl font-extrabold text--600 mb-0">
-          Top Leaderboard
+          Top Fuel Savers of this month
         </h2>
 
         {/* Image Section */}
