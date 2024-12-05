@@ -107,10 +107,8 @@ const Dashboard = () => {
               </div>
             </div>
 
-            <div className="flex gap-6  justify-around">
-              <div className="w-full md:w-1/2 lg:w-1/2">
-                <MultiBarChartPage />
-              </div>
+            <div className="flex h-[1000px] mb-3">
+              <MultiBarChartPage  height="100vh"/>
             </div>
           </div>
 

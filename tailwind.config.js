@@ -9,8 +9,5 @@ module.exports = {
         "scrollbar-track": "#f1f1f1", // Custom track color
       },
     },
-  },
-  plugins: [
-    require("tailwind-scrollbar"), // Ensure this is installed and configured
-  ],
+  }
 };

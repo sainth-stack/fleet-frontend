@@ -2,7 +2,7 @@ import React from "react";
 import MultiBarChart from "../../components/graphs/MultiBarChart";
 import { tableData } from "../../data/TableData";
 
-const MultiBarChartPage = () => {
+const MultiBarChartPage = ({height}) => {
   // Prepare the chart data by grouping the distance traveled by driver
   const driverNames = [...new Set(tableData.map((item) => item.driver))]; // Unique drivers
   const distances = driverNames.map((driver) => {
@@ -31,8 +31,8 @@ const MultiBarChartPage = () => {
       {
         label: "Distance Traveled (km)", // Label for the dataset
         data: sortedDistances, // Total distance for each driver
-        backgroundColor: "blue", // Bar color for all drivers
-        borderColor: "blue", // Border color for bars
+        backgroundColor: "#0ea5e9", // Changed to sky blue
+        borderColor: "#0ea5e9", // Matching border color
         borderWidth: 1,
       },
     ],
@@ -40,6 +40,7 @@ const MultiBarChartPage = () => {
 
   const chartOptions = {
     responsive: true,
+    maintainAspectRatio: false, // Added to allow custom height
     indexAxis: "y", // This makes the bars horizontal
     plugins: {
       legend: {
@@ -103,8 +104,8 @@ const MultiBarChartPage = () => {
     elements: {
       bar: {
         borderWidth: 3,
-        borderColor: "blue",
-        backgroundColor: "blue",
+        borderColor: "#0ea5e9", // Updated to sky blue
+        backgroundColor: "#0ea5e9", // Updated to sky blue
         barThickness: 40, // Increase this value to make the bars taller
       },
     },
@@ -112,12 +113,8 @@ const MultiBarChartPage = () => {
 
 
   return (
-    <div className="mt-3 min-w-full">
-      <div className="overflow-y-scroll max-h-[250px] scrollbar-thin scrollbar-thumb-blue-500 scrollbar-track-gray-200">
-        <div className="min-w-[800px]">
-          <MultiBarChart data={chartData} options={chartOptions} />
-        </div>
-      </div>
+    <div className="h-[100vh] w-[100%]">
+      <MultiBarChart data={chartData} options={chartOptions} height={height} />
     </div>
   );
 };

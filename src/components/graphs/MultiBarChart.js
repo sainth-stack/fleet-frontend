@@ -20,10 +20,10 @@ ChartJS.register(
   LinearScale
 );
 
-const MultiBarChart = ({ data, options }) => {
+const MultiBarChart = ({ data, options,height }) => {
   return (
     <>
-      <div className="min-w-96 mt-3 p-3   bg-white rounded-lg shadow-md">
+      <div className="min-w-96 mt-3 p-3 bg-white rounded-lg shadow-md" style={{ height: height }}>
         <Bar data={data} options={options} />
       </div>
     </>

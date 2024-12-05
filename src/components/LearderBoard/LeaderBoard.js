@@ -39,7 +39,7 @@ const Leaderboard = ({ data }) => {
   };
 
   return (
-    <div className="p-6 max-w-xl mb-6 mx-auto bg-gray-50 rounded-lg shadow-lg">
+    <div className="p-6 max-w-xl mb-6 mx-auto bg-gray-50 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300">
       <div className="flex items-center justify-center space-x-4 mb-6">
         {/* Title Section */}
         <h2 className="text-center text-xl font-extrabold text--600 mb-0">
@@ -61,15 +61,15 @@ const Leaderboard = ({ data }) => {
           top5Data.map((trip, index) => (
             <div
               key={trip.id}
-              className={`flex p-1 rounded-lg shadow-md ${getBackgroundColor(
+              className={`flex p-1 rounded-lg shadow-md cursor-pointer hover:shadow-xl transition-all duration-300 ${getBackgroundColor(
                 index
               )}`}
               onClick={(event) => handleItemClick(event, trip)}
             >
               {/* Left section for the user image */}
-              <div className="w-12 h-12 bg-gray-200 rounded-full  mr-4">
-                <GiLaurelsTrophy className="shadow-md rounded-full hover:scale-125" />
-                <h6 className="text-3xl  text-center -my-2 font-bold text-blue-600">
+              <div className="w-12 h-12 bg-gray-200 rounded-full mr-4">
+                <GiLaurelsTrophy className="shadow-md rounded-full hover:scale-125 cursor-pointer transition-transform duration-300" />
+                <h6 className="text-3xl text-center -my-2 font-bold text-blue-600">
                   {index + 1}
                 </h6>
               </div>
