@@ -1,7 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import { FaUserGraduate } from "react-icons/fa";
 import { GiLaurelsTrophy } from "react-icons/gi";
+import UserCard from "../UserCard/UserCard";
 const Leaderboard = ({ data }) => {
+  const [selectedUser, setSelectedUser] = useState(null);
+  const [popupPosition, setPopupPosition] = useState({ top: 0, left: 0 });
   // Sort data by fuel consumption in ascending order
   const sortedData = [...data].sort(
     (a, b) => a.fuelConsumption - b.fuelConsumption
@@ -24,6 +27,15 @@ const Leaderboard = ({ data }) => {
       default:
         return "bg-white"; // Default background for others
     }
+  };
+
+  const handleItemClick = (event, trip) => {
+    const rect = event.currentTarget.getBoundingClientRect();
+    setPopupPosition({
+      top: rect.top + window.scrollY,
+      left: rect.left + -300,
+    });
+    setSelectedUser(trip);
   };
 
   return (
@@ -52,6 +64,7 @@ const Leaderboard = ({ data }) => {
               className={`flex p-1 rounded-lg shadow-md ${getBackgroundColor(
                 index
               )}`}
+              onClick={(event) => handleItemClick(event, trip)}
             >
               {/* Left section for the user image */}
               <div className="w-12 h-12 bg-gray-200 rounded-full  mr-4">
@@ -66,7 +79,7 @@ const Leaderboard = ({ data }) => {
                 <div className="text-lg capitalize font-semibold text-gray-700 flex-1">
                   {trip.driver}
                 </div>
-                <div className="text-lg font-semibold mx-3 text-green-600 text-right">
+                <div className="text-lg font-semibold mx-3 text-green-600 text-left">
                   {trip.fuelConsumption} L
                 </div>
               </div>
@@ -76,6 +89,14 @@ const Leaderboard = ({ data }) => {
           <p className="text-center text-gray-500">No data available</p>
         )}
       </div>
+
+      {selectedUser && (
+        <UserCard
+          user={selectedUser}
+          onClose={() => setSelectedUser(null)}
+          position={popupPosition}
+        />
+      )}
     </div>
   );
 };

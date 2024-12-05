@@ -7,6 +7,7 @@ import BarChartPage from "./Charts/BarChartPage";
 import WaveGraphPage from "./Charts/WaveGraphPage ";
 import DoughnutChartPage from "./Charts/DoughnutChartPage";
 import { tableData } from "../data/TableData";
+import MultiBarChartPage from "./Charts/MultiBarChartPage";
 const Dashboard = () => {
   const [selectedMonth, setSelectedMonth] = useState('all');
   const [totalTips, setTotalTips] = useState(tableData.length);
@@ -103,6 +104,12 @@ const Dashboard = () => {
               </div>
               <div className="w-full md:w-1/2 lg:w-1/2">
                 <WaveGraphPage />
+              </div>
+            </div>
+
+            <div className="flex gap-6  justify-around">
+              <div className="w-full md:w-1/2 lg:w-1/2">
+                <MultiBarChartPage />
               </div>
             </div>
           </div>

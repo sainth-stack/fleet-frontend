@@ -21,7 +21,14 @@ ChartJS.register(
 );
 
 const MultiBarChart = ({ data, options }) => {
-  return <Bar data={data} options={options} />;
+  return (
+    <>
+      <div className="min-w-96 mt-3 p-3   bg-white rounded-lg shadow-md">
+        <Bar data={data} options={options} />
+      </div>
+    </>
+  );
+  
 };
 
 export default MultiBarChart;

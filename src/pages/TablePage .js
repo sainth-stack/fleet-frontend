@@ -3,14 +3,15 @@ import CustomTable from "../components/CustomTable";
 import { headers, tableData } from "../data/TableData";
 import "../styles/Table.css";
 import Layout from "../components/Layout/Layout";
+import ExportToExcel from "../components/Export/ExportXl";
 
 const TablePage = () => {
   return (
     <Layout>
       <div className="-z-20">
-        <h1 className="text-2xl font-bold text-center ">Table Data</h1>
 
         <div className=" container   ">
+           {/* <ExportToExcel />  */}
           <CustomTable headers={headers} data={tableData} />
         </div>
       </div>

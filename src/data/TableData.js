@@ -24,6 +24,12 @@ export const headers = [
   "Fuel Cost",
   "Bus Capacity",
   "Bus Occupancy",
+  /* new data  */
+  "Road Condition",
+  "No of Accidents by Driver",
+  "Milage in KM/Liter",
+  "Top Performance Ranking"
+  
 ];
 
 export const tableData = [
@@ -52,6 +58,11 @@ export const tableData = [
     fuelCost: "₹3,395.00",
     busCapacity: 20,
     busOccupancy: 45,
+    /* new data */
+    roadCondition: "Good",
+    noOfAccidentsByDriver: 1,
+    millageInKM: 7,
+    topPerformanceranking: 13,
   },
 
   {
@@ -80,6 +91,11 @@ export const tableData = [
     fuelCost: "₹1,843.00",
     busCapacity: 20,
     busOccupancy: 30,
+    /* new data */
+    roadCondition: "Good",
+    noOfAccidentsByDriver: 0,
+    millageInKM: 8,
+    topPerformanceranking: 4,
   },
   {
     id: 3,
@@ -107,6 +123,11 @@ export const tableData = [
     fuelCost: "₹41,225.00",
     busCapacity: 70,
     busOccupancy: 49,
+    /* new data */
+    roadCondition: "Moderate",
+    noOfAccidentsByDriver: 0,
+    millageInKM: 7,
+    topPerformanceRanking: 8,
   },
   {
     id: 4,
@@ -134,6 +155,11 @@ export const tableData = [
     fuelCost: "₹11,761.25",
     busCapacity: 10,
     busOccupancy: 60,
+    /*  */
+    roadCondition: "Bad",
+    noOfAccidentsByDriver: 0,
+    millageInKM: 10,
+    topPerformanceRanking: 1,
   },
   {
     id: 5,
@@ -161,6 +187,11 @@ export const tableData = [
     fuelCost: "₹14,550.00",
     busCapacity: 50,
     busOccupancy: 60,
+    /*  */
+    roadCondition: "Moderate",
+    noOfAccidentsByDriver: 0,
+    millageInKM: 7,
+    topPerformanceRanking: 8,
   },
   {
     id: 6,
@@ -188,6 +219,11 @@ export const tableData = [
     fuelCost: "₹13,361.75",
     busCapacity: 20,
     busOccupancy: 45,
+    /*  */
+    roadCondition: "Good",
+    noOfAccidentsByDriver: 0,
+    millageInKM: 10,
+    topPerformanceRanking: 2,
   },
   {
     id: 7,
@@ -215,6 +251,11 @@ export const tableData = [
     fuelCost: "₹23,255.75",
     busCapacity: 30,
     busOccupancy: 50,
+    /*  */
+    roadCondition: "Bad",
+    noOfAccidentsByDriver: 1,
+    millageInKM: 7,
+    topPerformanceRanking: 14,
   },
   {
     id: 8,
@@ -242,6 +283,11 @@ export const tableData = [
     fuelCost: "₹10,791.25",
     busCapacity: 10,
     busOccupancy: 30,
+    /*  */
+    roadCondition: "Moderate",
+    noOfAccidentsByDriver: 0,
+    millageInKM: 9,
+    topPerformanceRanking: 3,
   },
   {
     id: 9,
@@ -269,6 +315,11 @@ export const tableData = [
     fuelCost: "₹7,226.50",
     busCapacity: 12,
     busOccupancy: 32,
+    /*  */
+    roadCondition: "Moderate",
+    noOfAccidentsByDriver: 0,
+    millageInKM: 6,
+    topPerformanceRanking: 9,
   },
 
   /* 10 */
@@ -298,6 +349,11 @@ export const tableData = [
     fuelCost: "₹6,256.50",
     busCapacity: 60,
     busOccupancy: 28,
+    /*  */
+    roadCondition: "Bad",
+    noOfAccidentsByDriver: 0,
+    millageInKM: 7,
+    topPerformanceRanking: 8,
   },
   {
     id: 11,
@@ -324,6 +380,11 @@ export const tableData = [
     fuelCost: "₹1,697.50",
     busCapacity: 10,
     busOccupancy: 47,
+    /*  */
+    roadCondition: "Good",
+    noOfAccidentsByDriver: 0,
+    millageInKM: 9,
+    topPerformanceRanking: 5,
   },
   {
     id: 12,
@@ -350,6 +411,11 @@ export const tableData = [
     fuelCost: "₹5,941.25",
     busCapacity: 32,
     busOccupancy: 54,
+    /*  */
+    roadCondition: "Bad",
+    noOfAccidentsByDriver: 0,
+    millageInKM: 7,
+    topPerformanceRanking: 8,
   },
   {
     id: 13,
@@ -376,6 +442,11 @@ export const tableData = [
     fuelCost: "₹3,395.00",
     busCapacity: 6,
     busOccupancy: 34,
+    /*  */
+    roadCondition: "Moderate",
+    noOfAccidentsByDriver: 1,
+    millageInKM: 7,
+    topPerformanceRanking: 15,
   },
   {
     id: 14,
@@ -402,6 +473,11 @@ export const tableData = [
     fuelCost: "₹1,843.00",
     busCapacity: 50,
     busOccupancy: 43,
+    /*  */
+    roadCondition: "Bad",
+    noOfAccidentsByDriver: 2,
+    millageInKM: 6,
+    topPerformanceRanking: 17,
   },
   {
     id: 15,
@@ -428,6 +504,11 @@ export const tableData = [
     fuelCost: "₹41,225.00",
     busCapacity: 3,
     busOccupancy: 50,
+    /*  */
+    roadCondition: "Good",
+    noOfAccidentsByDriver: 0,
+    millageInKM: 9,
+    topPerformanceRanking: 6,
   },
   {
     id: 16,
@@ -454,6 +535,11 @@ export const tableData = [
     fuelCost: "₹11,761.25",
     busCapacity: 40,
     busOccupancy: 49,
+    /*  */
+    roadCondition: "Good",
+    noOfAccidentsByDriver: 1,
+    millageInKM: 5,
+    topPerformanceRanking: 16,
   },
   {
     id: 17,
@@ -480,6 +566,11 @@ export const tableData = [
     fuelCost: "₹14,550.00",
     busCapacity: 60,
     busOccupancy: 31,
+    /*  */
+    roadCondition: "Moderate",
+    noOfAccidentsByDriver: 0,
+    millageInKM: 6,
+    topPerformanceRanking: 9,
   },
   {
     id: 18,
@@ -506,6 +597,11 @@ export const tableData = [
     fuelCost: "₹13,386.00",
     busCapacity: 30,
     busOccupancy: 39,
+    /*  */
+    roadCondition: "Bad",
+    noOfAccidentsByDriver: 1,
+    millageInKM: 7,
+    topPerformanceRanking: 12,
   },
   {
     id: 19,
@@ -533,6 +629,11 @@ export const tableData = [
     fuelCost: "₹5,827.50",
     busCapacity: 20,
     busOccupancy: 55,
+    /*  */
+    roadCondition: "Good",
+    noOfAccidentsByDriver: 0,
+    millageInKM: 8,
+    topPerformanceRanking: 7,
   },
   {
     id: 20,
@@ -559,6 +660,12 @@ export const tableData = [
     fuelCost: "₹9,561.00",
     busCapacity: 80,
     busOccupancy: 44,
+    /*
+     */
+    roadCondition: "Moderate",
+    noOfAccidentsByDriver: 1,
+    millageInKM: 7,
+    topPerformanceRanking: 11,
   },
   //   20
 
@@ -587,6 +694,11 @@ export const tableData = [
     fuelCost: "₹7,226.50",
     busCapacity: 1,
     busOccupancy: 54,
+    /*  */
+    roadCondition: "Moderate",
+    noOfAccidentsByDriver: 1,
+    millageInKM: 9,
+    topPerformanceRanking: 8,
   },
   {
     id: 22,
@@ -613,6 +725,11 @@ export const tableData = [
     fuelCost: "₹6,256.50",
     busCapacity: 30,
     busOccupancy: 23,
+    /*  */
+    roadCondition: "Bad",
+    noOfAccidentsByDriver: 0,
+    millageInKM: 7,
+    topPerformanceRanking: 8,
   },
   {
     id: 23,
@@ -639,6 +756,11 @@ export const tableData = [
     fuelCost: "₹1,697.50",
     busCapacity: 25,
     busOccupancy: 32,
+    /*  */
+    roadCondition: "Good",
+    noOfAccidentsByDriver: 1,
+    millageInKM: 9,
+    topPerformanceRanking: 9,
   },
   {
     id: 24,
@@ -665,6 +787,11 @@ export const tableData = [
     fuelCost: "₹5,941.25",
     busCapacity: 20,
     busOccupancy: 60,
+    /*  */
+    roadCondition: "Good",
+    noOfAccidentsByDriver: 1,
+    millageInKM: 7,
+    topPerformanceRanking: 10,
   },
 ];
 

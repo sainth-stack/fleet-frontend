@@ -1,18 +1,28 @@
 import React, { useState } from "react";
 import PieChart from "../../components/graphs/DoughnutChart";
+import { tableData } from "../../data/TableData";
 
 const PieChartPage = () => {
+  
+
+  // Grouping the data by busType and counting the occurrences
+  const groupedData = tableData.reduce((acc, curr) => {
+    acc[curr.busType] = (acc[curr.busType] || 0) + 1; // Count occurrences of each busType
+    return acc;
+  }, {});
+
+  // Prepare data for the chart (using the count of each busType)
   const initialData = {
-    labels: ["Close", "Regular", "Far"], // Labels for the sectors
+    labels: Object.keys(groupedData), // busType values
     datasets: [
       {
-        data: [16, 2, 6], // Percentage values for each sector
+        data: Object.values(groupedData), // Count of each busType
         backgroundColor: [
           "#FF6B6B", // Warm Red
           "#4CAF50", // Distinct Green
-          "#87CEEB", // Sky Blue (changed from #2196F3)
+          "#87CEEB", // Sky Blue
+          "#FF9800", // Orange, add more if needed
         ],
-        // Colors for each sector
         borderWidth: 1, // Border around the sectors
       },
     ],
@@ -41,7 +51,7 @@ const PieChartPage = () => {
     plugins: {
       title: {
         display: false,
-        text: "Pie Chart",
+        text: "Bus Type Count",
       },
       legend: {
         display: false, // Disabling default legend to create a custom one
@@ -53,7 +63,7 @@ const PieChartPage = () => {
           weight: "300",
           size: 10,
         },
-        formatter: (value) => value.toFixed(0), // Format the value to 2 decimal places
+        formatter: (value) => value.toFixed(0), // Format the value to 0 decimal places
         anchor: "end", // Place the label at the end of the bar
         align: "top", // Align the label to the top of the bar
       },
@@ -62,7 +72,7 @@ const PieChartPage = () => {
           label: (context) => {
             let label = context.label || "";
             let value = context.raw || 0;
-            return `${label}: ${value}%`;
+            return `${label}: ${value}`;
           },
         },
       },
@@ -78,7 +88,7 @@ const PieChartPage = () => {
 
   return (
     <>
-      <h2 className="text-lg font-bold text-center mb-1">Distance by Distribution</h2>
+      <h2 className="text-lg font-bold text-center mb-1">Bus Type Count</h2>
       <div className="flex justify-center items-start gap-6 px-1">
         {/* Pie Chart */}
         <div className="my-2 w-44 rounded-md shadow-sm h-44 flex justify-center">
@@ -110,7 +120,7 @@ const PieChartPage = () => {
               >
                 {`${label}: ${
                   visibility[index] ? initialData.datasets[0].data[index] : 0
-                }%`}
+                }`}
               </span>
             </div>
           ))}
